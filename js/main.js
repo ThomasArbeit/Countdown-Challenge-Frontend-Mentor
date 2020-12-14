@@ -28,7 +28,7 @@ let flipSeconds = document.getElementById('flipSeconds');
 
 
 // Date du countdown
-var countDownDate = new Date('Dec 31, 2020 23:12:59').getTime();
+var countDownDate = new Date('Dec 31, 2020 23:59:59').getTime();
 var now = new Date().getTime();
 var distance = countDownDate - now;
 var days = Math.floor(distance / (1000*60*60*24));
