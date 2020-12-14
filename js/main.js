@@ -28,7 +28,7 @@ let flipSeconds = document.getElementById('flipSeconds');
 
 
 // Date du countdown
-var countDownDate = new Date('Dec 31, 2020 23:59:59').getTime();
+var countDownDate = new Date('Dec 31, 2020 23:12:59').getTime();
 var now = new Date().getTime();
 var distance = countDownDate - now;
 var days = Math.floor(distance / (1000*60*60*24));
@@ -88,8 +88,8 @@ setInterval(function(){
     // Hours
     if (minutes == 0 && seconds == 0){
         flip(flipHours);
-        hoursParaNextFront.textContent = minutes-1;
-        hoursParaNextBack.textContent = minutes-1;
+        hoursParaNextFront.textContent = hours-1;
+        hoursParaNextBack.textContent = hours-1;
     }
     
     if(hours == 0){
@@ -100,8 +100,8 @@ setInterval(function(){
     // Days
     if((minutes == 0 && seconds == 0) && hours == 0){
         flip(flipDays);
-        daysParaNextFront.textContent = minutes-1;
-        daysParaNextBack.textContent = minutes-1;
+        daysParaNextFront.textContent = days-1;
+        daysParaNextBack.textContent = days-1;
     }
 
 
