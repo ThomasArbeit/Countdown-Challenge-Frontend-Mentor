@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+body {
+  background-image: linear-gradient(180deg, #1E1E28, #251D2C);
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  background: url(../img/bg-stars.svg);
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  background: url(../img/pattern-hills.svg) no-repeat;
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 140px;
+}
+
+@keyframes vibrance {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+.container {
+  width: 90%;
+  max-width: 920px;
+  padding-top: 180px;
+  margin: auto;
+}
+
+.countdown {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+}
+.countdown__display {
+  height: 188px;
+  border-radius: 9px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px #181A25;
+  font-size: 100px;
+  line-height: 100px;
+  color: #F95880;
+}
+.countdown__display:hover .countdown__inner {
+  transform: rotateX(-180deg);
+}
+.countdown__display::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #181B26;
+  position: absolute;
+  border-radius: 50%;
+  right: -5%;
+  top: 45%;
+  z-index: 4;
+}
+.countdown__display::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: #181B26;
+  position: absolute;
+  border-radius: 50%;
+  left: -5%;
+  top: 45%;
+  z-index: 4;
+}
+.countdown__inner {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  z-index: 3;
+}
+.countdown__front, .countdown__back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.countdown__back {
+  transform: rotateX(180deg);
+  position: relative;
+}
+.countdown__front, .countdown__backtop {
+  background-color: #2C2C44;
+}
+.countdown__front p, .countdown__backtop p {
+  position: absolute;
+  bottom: -50%;
+  color: #D94D70;
+}
+.countdown__back, .countdown__backbottom {
+  background-color: #34364F;
+}
+.countdown__back p, .countdown__backbottom p {
+  position: absolute;
+  top: -56%;
+}
+.countdown__backbottom, .countdown__backtop {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+.countdown__text {
+  text-align: center;
+  margin-top: 30px;
+  color: #8B8BA5;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
