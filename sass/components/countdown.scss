@@ -19,12 +19,6 @@
         line-height: 100px;
         color: #F95880;
 
-        &:hover{
-            .countdown__inner{
-                transform: rotateX(-180deg)
-            }
-        } 
-
         &::after{
             content:"";
             height: 20px;

@@ -37,20 +37,23 @@ var minutes = Math.floor((distance % (1000*60*60)) / (1000 * 60));
 var seconds = Math.floor((distance % (1000*60)) / 1000);
 
 console.log(seconds);
+console.log(hours);
 
 setInterval(function(){
     now = new Date().getTime();
     distance = countDownDate - now;
 
     days = Math.floor(distance / (1000*60*60*24));
-    hours = Math.floor((distance % (1000*60*60/24)) / (1000*60*60));
+    hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
     minutes = Math.floor((distance % (1000*60*60)) / (1000 * 60));
     seconds = Math.floor((distance % (1000*60)) / 1000);
 
     daysParaFront.textContent = days;
     daysParaBack.textContent = days;
+
     hoursParaFront.textContent = hours;
     hoursParaBack.textContent = hours;
+
     minutesParaFront.textContent = minutes;
     minutesParaBack.textContent = minutes;
     

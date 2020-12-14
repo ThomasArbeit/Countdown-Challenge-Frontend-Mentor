@@ -67,9 +67,6 @@ h1 {
   line-height: 100px;
   color: #F95880;
 }
-.countdown__display:hover .countdown__inner {
-  transform: rotateX(-180deg);
-}
 .countdown__display::after {
   content: "";
   height: 20px;
